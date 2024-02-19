@@ -1,0 +1,36 @@
+{
+    "myBudget": [
+        {
+            "title": "Eat out",
+            "budget": 800
+        },
+        {
+            "title": "Rent",
+            "budget": 1000
+        },
+        {
+            "title": "Groceries",
+            "budget": 300
+        },
+        {
+            "title":"Clothing",
+            "budget":200
+        },
+        {
+            "title":"Books",
+            "budget":100
+        },
+        {
+            "title":"Cleaning Supplies",
+            "budget":70
+        },
+        {
+            "title":"Medical Supplies",
+            "budget":100
+        },
+        {
+            "title":"Electronics",
+            "budget":500
+        }
+    ]
+}
