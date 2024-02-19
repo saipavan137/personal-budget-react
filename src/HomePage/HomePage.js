@@ -10,7 +10,7 @@ function HomePage() {
         label: 'My First Dataset',
         data: [],
         backgroundColor: [
-          '#3498db', '#2ecc71', '#e74c3c', '#f39c12', '#9b59b6', '#34495e', '#ecf0f1','#ad123'
+          '#f6931f', '#673ab7 ', '#87d37c ', '#f8b270 ', '#2980b9 ', '#e74c3c ', '#7d3c98 ','#c0c0c0   '
         ],
         hoverOffset: 4
       }]
@@ -30,6 +30,12 @@ function HomePage() {
   }
 
   const drawD3Chart = () => {
+
+    let svg = d3.select("#dChart").select("svg");
+if (!svg.empty()) {
+  // If SVG exists, remove it before creating a new one
+  svg.remove();
+}
     const data = dataSource.datasets[0].data; // Your data array
     const labels = dataSource.labels; // Your labels array
     const width = 500;
@@ -37,7 +43,7 @@ function HomePage() {
     const radius = Math.min(width, height) / 2;
 
     // Create an SVG element within the "dChart" div
-    const svg = d3.select("#dChart")
+     svg = d3.select("#dChart")
       .append("svg")
       .attr("width", width)
       .attr("height", height)
@@ -52,7 +58,7 @@ function HomePage() {
 
     // Create an arc generator
     const arc = d3.arc()
-      .innerRadius(0)
+      .innerRadius(100)
       .outerRadius(radius);
 
     // Create and append path elements for each pie slice
@@ -165,7 +171,7 @@ function HomePage() {
             </div>
             </div>
             <article>
-          <div className="D3">
+          <div className="D3js">
             <h1>D3JS Chart</h1>
             <p>
               <div id="dChart" width="1000" height="1000"></div>
